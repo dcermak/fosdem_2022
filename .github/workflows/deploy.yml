@@ -16,7 +16,10 @@ jobs:
 
       - name: copy the webpage to build
         run: |
+          yarn install
           mkdir -p build
+          cp --recursive media/ build/
+          cp --recursive node_modules/ build/
           cp *.html build/
 
       - name: deploy to github pages
