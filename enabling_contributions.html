@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Tearing down Barriers for Contributions</title>
+<meta name="author" content="(Dan Čermák)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./node_modules/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="./node_modules/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
+<link rel="stylesheet" href="./node_modules/reveal.js/plugin/highlight/zenburn.css"/></head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2 class="title">Tearing down Barriers for Contributions</h2>
+<p class="author">Dan Čermák</p>
+<img src="./media/FOSDEM_logo.svg" height="50px" style="margin-bottom:-12px"/> FOSDEM 2022
+<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"><a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+CC BY-SA 4.0 <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i><i class="fab fa-creative-commons-sa"></i></a></p>
+</section>
+
+
+<section>
+<section id="slide-org65cd494">
+<h2 id="org65cd494">who -u</h2>
+<p>
+Dan Čermák
+</p>
+
+<p style="text-align:left">
+<ul>
+<li style="list-style-type:none;"><i class="fab fa-suse"></i> Software Developer @SUSE
+<li style="list-style-type:none;"><i class="fab fa-fedora"></i> i3 SIG, Package maintainer
+<li style="list-style-type:none;"><i class="far fa-heart"></i> developer tools, testing and documentation</li>
+<li style="list-style-type:none;">&nbsp</li>
+<li style="list-style-type:none;"><i class="fab fa-github"></i> <a href="https://github.com/D4N/">D4N</a> / <a href="https://github.com/dcermak/">dcermak</a></li>
+<li style="list-style-type:none;"><i class="fab fa-mastodon"></i> <a href="https://mastodon.social/@Defolos">@Defolos@mastodon.social</a></li>
+<li style="list-style-type:none;"><i class="fab fa-twitter"></i> <a href="https://twitter.com/DefolosDC/">@DefolosDC</a></li>
+<li style="list-style-type:none;">&nbsp</li>
+<li style="list-style-type:none;"><i class="fas fa-key"></i><a href="https://keys.openpgp.org/vks/v1/by-fingerprint/FF62839C3097EBE20E8926B2E632C3380610D1C5">E632 C338 0610 D1C5</a></li>
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga32674c">
+<h2 id="orga32674c"><span class="todo TODO">TODO</span> Agenda</h2>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgc4887b7">
+<h2 id="orgc4887b7">Story</h2>
+<aside class="notes">
+<ul>
+<li>started the OSCC &rarr; workshop &rarr; find projects where non coders can contribute
+&rarr; actually really hard</li>
+
+</ul>
+
+</aside>
+
+<p class="fragment (appear)">
+ <img src="./media/Open-Source-Community-Citizens-Logo-Negative.png" height="200px" class="fragment appear"/>
+</p>
+
+<p class="fragment (appear)">
+It all started with a workshop…
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org1e06686">
+<h2 id="org1e06686">Target audience</h2>
+<aside class="notes">
+<p>
+GENERAL:
+</p>
+<ul>
+<li>invest more into newcomers and less into drive by contributions</li>
+<li>do stuff that gets you most bang for the buck</li>
+<li>two types of potential contributors:
+<ol>
+<li>wants to fix a bug/issue or add a feature</li>
+<li>thinks the project is cool &rArr; wants to contribute just because</li>
+
+</ol></li>
+<li>don't kill altruism!</li>
+<li>open communication, open decision processes, make it clear how to become a member/contributor</li>
+<li>there's no silver bullet</li>
+<li>be aware that this is a continuous &amp; never-ending process</li>
+
+</ul>
+
+</aside>
+<aside class="notes">
+<ul>
+<li>aimed at maintainers who <b>want</b> more contributors and <b>want</b> to put in the work</li>
+
+</ul>
+
+<p>
+ask yourself:
+</p>
+<ul>
+<li>Am I willing to continuously put in the work? (&rarr; this will never end)</li>
+<li>Do you need new &amp; more contributors?</li>
+<li>Do you want drive-by contributions?</li>
+
+</ul>
+
+<p>
+&rArr; You will write a lot of documentation!
+</p>
+
+<p>
+do some research:
+</p>
+<ul>
+<li>in which areas are you lacking people?</li>
+
+</ul>
+
+</aside>
+
+<ul>
+<li class="fragment appear">package &amp; project maintainers</li>
+<li class="fragment appear">you <b>want</b> more contributions &amp; contributors</li>
+
+</ul>
+
+<p>
+<img src="./media/silver_bullet.png" style="transform:rotate(90deg);" class="fragment appear"/>
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org0edb212">
+<h2 id="org0edb212">Make it trivial to contribute</h2>
+<aside class="notes">
+<ul>
+<li>can I figure it out &rarr; contributor docs, translations available</li>
+<li>what do I need &rarr; barrier to entry wrt tooling</li>
+<li>accept contribution &rarr; what is the required process, is it sensible &amp; doable?</li>
+
+</ul>
+
+</aside>
+
+<p class="fragment (appear)">
+<i class="fas fa-spell-check"></i>
+Can my grandma correct a typo?
+</p>
+
+</section>
+<section id="slide-org0edb212-split">
+
+<ol>
+<li class="fragment appear">Can I figure out how to contribute?</li>
+<li class="fragment appear">What do I need to contribute?</li>
+<li class="fragment appear">How can I get my contribution accepted?</li>
+
+</ol>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org22697e3">
+<h2 id="org22697e3">Tooling</h2>
+<p>
+ <i class="fas fa-hands-helping"></i> Help not a hindrance <i class="fas fa-hand-paper"></i>
+</p>
+
+</section>
+<section id="slide-orga28e8be">
+<h3 id="orga28e8be">Editors/Web IDEs</h3>
+<aside class="notes">
+<ul>
+<li>drastically lower barrier to entry</li>
+<li>standardized development environment</li>
+<li>mostly based on VSCode + containers, highly customizable</li>
+
+</ul>
+
+<p>
+&rarr; DEMO?
+</p>
+
+</aside>
+<ul>
+<li><a href="https://gitpod.io/">Gitpod</a></li>
+<li><a href="https://github.com/features/codespaces">Github Codespaces</a></li>
+<li><a href="https://www.eclipse.org/che/">Eclipse Che</a></li>
+
+</ul>
+
+
+</section>
+<section id="slide-org0b8310a">
+<h3 id="org0b8310a">Translations</h3>
+<aside class="notes">
+<ul>
+<li>drive by contributions can be helpful here</li>
+<li>don't make people install gettext or edit XML…</li>
+
+</ul>
+
+</aside>
+
+<ul>
+<li>use a webservice like <a href="https://weblate.org/">weblate</a></li>
+
+</ul>
+
+
+</section>
+<section id="slide-org45a7d0a">
+<h3 id="org45a7d0a">Documentation / Tutorials</h3>
+<aside class="notes">
+<ul>
+<li>docs can be written by users unfamiliar with rst/markdown/etc.
+&rarr; provide a web IDE + "open in $webIDE" button
+&rarr; for bigger docs, accept the content, convert it yourself</li>
+
+</ul>
+
+</aside>
+
+<ul>
+<li class="fragment appear">make it obvious how to edit</li>
+<li class="fragment appear">accept <b>any</b> type of format (even <i class="far fa-file-word"></i> or <i class="fas fa-scroll"></i>)</li>
+
+</ul>
+
+
+</section>
+<section id="slide-org866afbe">
+<h3 id="org866afbe">Communication</h3>
+<aside class="notes">
+<ul>
+<li>clearly document how to reach the project, monitor this place</li>
+
+</ul>
+
+<p>
+real time chat:
+</p>
+<ul>
+<li>IRC &amp; Gitter: not the best thing anymore</li>
+<li>Matrix, Slack, Discord, etc., bridge if possible</li>
+
+</ul>
+
+<p>
+Forums/ML:
+</p>
+<ul>
+<li>Discourse, mailinglists, GitHub discussions</li>
+<li>separate user forum &amp; dev forum</li>
+
+</ul>
+
+<p>
+Issue tracker:
+</p>
+<ul>
+<li>have one, preferably near the source code</li>
+<li>for larger projects: separate from feature tracking</li>
+
+</ul>
+
+<p>
+&rarr; use whatever your contributors &amp; users are most familiar with
+</p>
+
+</aside>
+
+<p class="fragment (appear)">
+<b>One</b> place to reach the project
+</p>
+
+<ol>
+<li class="fragment appear">Real time chat</li>
+<li class="fragment appear">Forum/mailing list</li>
+<li class="fragment appear">Issue/feature tracker</li>
+
+</ol>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orge913e61">
+<h2 id="orge913e61">Community</h2>
+<aside class="notes">
+<ul>
+<li>project should make it clear how to contact it &amp; get it touch
+&rArr; landing page, have just very few channels and monitor all of them
+if someone joins, you as the maintainer must be made aware of that</li>
+<li>project must <b>want</b> contributions</li>
+
+</ul>
+
+</aside>
+
+<ul>
+<li>be an enabler not a gatekeeper</li>
+
+</ul>
+
+
+</section>
+<section id="slide-org6a24fda">
+<h3 id="org6a24fda">The Contributor Funnel</h3>
+<aside class="notes">
+<ul>
+<li>generally how people become maintainers/contributors:
+user &rarr; contributor &rarr; maintainer</li>
+<li>more contributors? &rArr; get more users!</li>
+
+</ul>
+
+</aside>
+
+<p>
+<img src="./media/contributor_funnel.svg"></img>
+</p>
+
+
+</section>
+<section id="slide-orgdfd27d1">
+<h3 id="orgdfd27d1">Recruiting contributors</h3>
+<aside class="notes">
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1hsJLv1ieSqtXBzd5YZusY-mB8e1VJzaeOmh8Q4VeMio/">study by Mozilla</a> about engagement in the community</li>
+<li>you <b>must</b> give contributors a vision &rarr; they'll return even if the past wasn't great
+&rarr; have features/roadmaps ready, encourage ideas, etc</li>
+<li>onboarding different: past experience highly motivating</li>
+
+</ul>
+
+</aside>
+<p>
+<img src="./media/mozilla_impact_study.png"></img>
+</p>
+
+<ul>
+<li class="fragment appear">contributors need a vision</li>
+<li class="fragment appear">good onboarding experience encourages further onboarding</li>
+
+</ul>
+
+</section>
+<section id="slide-orgdfd27d1-split">
+
+<aside class="notes">
+<ul>
+<li>respond within 48h to PR &rArr; very high likelihood of returning</li>
+<li>respond later than 7d &rArr; you are not seeing them ever again</li>
+
+</ul>
+
+</aside>
+
+<p>
+<img src="./media/mozilla_days_to_first_contribution.png" height="350px"/>
+</p>
+
+<ul>
+<li class="fragment appear">prompt responses boost the chances of a contributor returning</li>
+<li class="fragment appear">suggest another issue to work on</li>
+
+</ul>
+
+</section>
+<section id="slide-org1430c5f">
+<h3 id="org1430c5f">Retaining contributors</h3>
+<aside class="notes">
+<ul>
+<li>intrinsic motivation: desire to code just for fun/hobby</li>
+<li>altruism, including community identification (satisfy need to belong to group)</li>
+<li>future reward: revenue from selling product, skills, self-marketing, peer recognition</li>
+<li>personal need: scratch your own itch</li>
+
+</ul>
+
+</aside>
+<p class="fragment (appear)">
+Keep them motivated!
+</p>
+
+<ul>
+<li class="fragment appear">intrinsic motivation</li>
+<li class="fragment appear">altruism</li>
+<li class="fragment appear">future rewards</li>
+<li class="fragment appear">personal need</li>
+
+</ul>
+
+
+</section>
+<section id="slide-org8a8047f">
+<h3 id="org8a8047f">Build a welcoming community</h3>
+<aside class="notes">
+<ul>
+<li>codes of conduct are not evil,
+but don't just stick the <a href="https://www.contributor-covenant.org/">contributor covenant</a> on your project and be done with it
+&rArr; live by the thing</li>
+
+<li>provide a place for your community to meet &amp; talk
+&rarr; nurtures the sense of belonging
+&rarr; helps <b>you</b>, as all communication needn't go through you</li>
+
+<li>documented rules &amp; processes prevent hair splitting</li>
+
+</ul>
+
+</aside>
+
+<ul>
+<li class="fragment appear">enforce a code of conduct</li>
+<li class="fragment appear">provide a place for your community to meet &amp; talk</li>
+<li class="fragment appear">document processes meticulously</li>
+<li class="fragment appear">be present and friendly</li>
+<li class="fragment appear">empower your contributors</li>
+
+</ul>
+
+</section>
+<section id="slide-org83f456d">
+<h3 id="org83f456d">Productive Communication</h3>
+<ul>
+<li>reduce noise</li>
+<li>be constructive</li>
+<li>you don't have to respond to everything</li>
+
+</ul>
+
+</section>
+<section id="slide-orge30fe3c">
+<h3 id="orge30fe3c">Landing page</h3>
+<aside class="notes">
+<ul>
+<li>have a simple landing page with outline how to contribute</li>
+<li>must have: how to reach the project and monitor that channel!</li>
+
+</ul>
+
+</aside>
+
+<p class="fragment (appear)">
+<a href="https://whatcanidoformozilla.org" class="fragment (appear)">whatcanidoformozilla.org</a>
+</p>
+<ul>
+<li>links to communication channels</li>
+<li>contributor documentation</li>
+
+</ul>
+
+</section>
+<section id="slide-orgbb32914">
+<h3 id="orgbb32914">Empower others</h3>
+<ul>
+<li class="fragment appear">Even if it takes you 5 min to fix it yourself and 50 min to mentor a contributor, mentor the contributor!</li>
+
+</ul>
+
+</section>
+<section id="slide-org68ffdf1">
+<h3 id="org68ffdf1">Be clear &amp; accountable</h3>
+<aside class="notes">
+<ul>
+<li>When will a contribution be accepted?</li>
+<li>How to become a maintainer?</li>
+<li>How to cut new releases?</li>
+
+<li>you must stick to your own rules</li>
+
+</ul>
+
+</aside>
+
+<ul>
+<li class="fragment appear">clearly documented processes &amp; rules</li>
+<li class="fragment appear">stick to them, enforce them</li>
+<li class="fragment appear">remove bad actors</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgfb39e93">
+<h2 id="orgfb39e93"><span class="todo TODO">TODO</span> Links</h2>
+<ul>
+<li>slides:
+ <i class="fab fa-github"></i> <a href="https://github.com/dcermak/fosdem_2022"><code>dcermak/fosdem_2022</code></a></li>
+
+<li><a href="https://docs.google.com/presentation/d/1hsJLv1ieSqtXBzd5YZusY-mB8e1VJzaeOmh8Q4VeMio/">measuring engagement</a> from Mozilla</li>
+<li><a href="https://mikemcquaid.com/2018/08/14/the-open-source-contributor-funnel-why-people-dont-contribute-to-your-open-source-project/">The Open Source Contributor Funnel by Mike McQuaid</a></li>
+<li><a href="https://opensource.guide/building-community/">The Open Source Guide</a></li>
+<li><a href="http://www.jstor.org/stable/27751021">Working for Free? Motivations for Participating in Open-Source Projects</a></li>
+<li><a href="https://producingoss.com/">Producing Open Source Software</a></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc8b9cc9">
+<h2 id="orgc8b9cc9"><span class="todo TODO">TODO</span> Legal</h2>
+<ul>
+<li><a href="https://revealjs.com/">reveal.js</a> MIT</li>
+<li><a href="https://fontawesome.com/">Font Awesome</a> CC-BY-4.0 and SIL OFL 1.1 and MIT</li>
+<li>Open Source Contributor funnel: own work derived from <a href="https://mikemcquaid.com/2018/08/14/the-open-source-contributor-funnel-why-people-dont-contribute-to-your-open-source-project/">Mike McQaid</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Silver_bullet.png">Silver bullet photo</a> CC-BY-SA-4.0</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org37b262b">
+<h2 id="org37b262b">Questions?</h2>
+<p data-fragment-index="1" class="fragment appear">
+<b>Answers!</b>
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="./node_modules/reveal.js/dist/reveal.js"></script>
+<script src="./node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="./node_modules/reveal.js/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealHighlight, RevealNotes, history],
+transition: 'none', hash: true
+});
+
+</script>
+</body>
+</html>
