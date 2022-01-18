@@ -1,0 +1,10 @@
+{
+  "name": "fosdem_2022",
+  "description": "Slides of the talk \"Tearing down Barriers for Contributions by Non-coders and Newcomers\"",
+  "author": "Dan Čermák",
+  "license": "CC-BY-SA-4.0",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "reveal.js": "^4.2.1"
+  }
+}

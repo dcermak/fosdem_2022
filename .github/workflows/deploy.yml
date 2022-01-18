@@ -1,0 +1,26 @@
+---
+name: Deploy the presentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    name: build the presentation
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: copy the webpage to build
+        run: |
+          mkdir -p build
+          cp *.html build/
+
+      - name: deploy to github pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build

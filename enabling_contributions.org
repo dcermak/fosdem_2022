@@ -1,0 +1,332 @@
+# -*- org-confirm-babel-evaluate: nil; -*-
+#+AUTHOR: Dan Čermák
+#+DATE: 5.2.2022
+#+EMAIL: dcermak@suse.com
+#+TITLE: Tearing down Barriers for Contributions
+#+SUBTITLE: Enable 
+
+#+REVEAL_ROOT: ./node_modules/reveal.js/
+#+REVEAL_THEME: simple
+#+REVEAL_PLUGINS: (highlight notes history)
+#+REVEAL_DEFAULT_FRAG_STYLE: appear
+#+REVEAL_INIT_OPTIONS: transition: 'none', hash: true
+#+OPTIONS: num:nil toc:nil center:nil reveal_title_slide:nil
+#+REVEAL_EXTRA_CSS: ./node_modules/@fortawesome/fontawesome-free/css/all.min.css
+#+REVEAL_HIGHLIGHT_CSS: ./node_modules/reveal.js/plugin/highlight/zenburn.css
+
+#+REVEAL_TITLE_SLIDE: <h2 class="title">%t</h2>
+# #+REVEAL_TITLE_SLIDE: <p class="subtitle" style="color: Gray;">%s</p>
+#+REVEAL_TITLE_SLIDE: <p class="author">%a</p>
+#+REVEAL_TITLE_SLIDE: <img src="./media/FOSDEM_logo.svg" height="50px" style="margin-bottom:-12px"/> FOSDEM 2022
+# #+REVEAL_TITLE_SLIDE: <h3 class="date"><img src="./media/FOSDEM_logo.svg" height="50px" style="margin-bottom:-12px"/>%d</h3>
+#+REVEAL_TITLE_SLIDE: <p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"><a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+#+REVEAL_TITLE_SLIDE: CC BY-SA 4.0 <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i><i class="fab fa-creative-commons-sa"></i></a></p>
+
+
+* who -u
+
+Dan Čermák
+
+#+REVEAL_HTML: <p style="text-align:left">
+#+REVEAL_HTML: <ul>
+#+REVEAL_HTML: <li style="list-style-type:none;"><i class="fab fa-suse"></i> Software Developer @SUSE
+#+REVEAL_HTML: <li style="list-style-type:none;"><i class="fab fa-fedora"></i> i3 SIG, Package maintainer
+#+REVEAL_HTML: <li style="list-style-type:none;"><i class="far fa-heart"></i> developer tools, testing and documentation</li>
+#+REVEAL_HTML: <li style="list-style-type:none;">&nbsp</li>
+#+REVEAL_HTML: <li style="list-style-type:none;"><i class="fab fa-github"></i> <a href="https://github.com/D4N/">D4N</a> / <a href="https://github.com/dcermak/">dcermak</a></li>
+#+REVEAL_HTML: <li style="list-style-type:none;"><i class="fab fa-mastodon"></i> <a href="https://mastodon.social/@Defolos">@Defolos@mastodon.social</a></li>
+#+REVEAL_HTML: <li style="list-style-type:none;"><i class="fab fa-twitter"></i> <a href="https://twitter.com/DefolosDC/">@DefolosDC</a></li>
+#+REVEAL_HTML: <li style="list-style-type:none;">&nbsp</li>
+#+REVEAL_HTML: <li style="list-style-type:none;"><i class="fas fa-key"></i><a href="https://keys.openpgp.org/vks/v1/by-fingerprint/FF62839C3097EBE20E8926B2E632C3380610D1C5">E632 C338 0610 D1C5</a></li>
+#+REVEAL_HTML: </ul>
+
+* TODO Agenda
+
+
+
+* Story
+
+#+BEGIN_NOTES
+- started the OSCC \rightarrow workshop \rightarrow find projects where non coders can contribute
+  \rightarrow actually really hard
+#+END_NOTES
+
+#+ATTR_REVEAL: :frag (appear)
+@@html: <img src="./media/Open-Source-Community-Citizens-Logo-Negative.png" height="200px" class="fragment appear"/>@@
+
+#+ATTR_REVEAL: :frag (appear)
+It all started with a workshop…
+
+
+* Target audience
+
+#+begin_notes
+GENERAL:
+- invest more into newcomers and less into drive by contributions
+- do stuff that gets you most bang for the buck
+- two types of potential contributors:
+  1. wants to fix a bug/issue or add a feature
+  2. thinks the project is cool \Rightarrow wants to contribute just because
+- don't kill altruism!
+- open communication, open decision processes, make it clear how to become a member/contributor
+- there's no silver bullet
+- be aware that this is a continuous & never-ending process
+#+end_notes
+#+begin_notes
+- aimed at maintainers who *want* more contributors and *want* to put in the work
+
+ask yourself:
+- Am I willing to continuously put in the work? (\rightarrow this will never end)
+- Do you need new & more contributors?
+- Do you want drive-by contributions?
+
+\Rightarrow You will write a lot of documentation!
+
+do some research:
+- in which areas are you lacking people?
+#+end_notes
+
+#+ATTR_REVEAL: :frag (appear)
+- package & project maintainers
+- you *want* more contributions & contributors
+
+@@html:<img src="./media/silver_bullet.png" style="transform:rotate(90deg);" class="fragment appear"/>@@
+
+
+* Make it trivial to contribute
+#+begin_notes
+- can I figure it out \rightarrow contributor docs, translations available
+- what do I need \rightarrow barrier to entry wrt tooling
+- accept contribution \rightarrow what is the required process, is it sensible & doable?
+#+end_notes
+
+#+ATTR_REVEAL: :frag (appear)
+@@html:<i class="fas fa-spell-check"></i>@@
+Can my grandma correct a typo?
+
+#+REVEAL: split
+
+#+ATTR_REVEAL: :frag (appear)
+1. Can I figure out how to contribute?
+2. What do I need to contribute?
+3. How can I get my contribution accepted?
+
+
+* Tooling
+
+@@html: <i class="fas fa-hands-helping"></i>@@ Help not a hindrance @@html:<i class="fas fa-hand-paper"></i>@@
+
+** Editors/Web IDEs
+
+#+begin_notes
+- drastically lower barrier to entry
+- standardized development environment
+- mostly based on VSCode + containers, highly customizable
+
+\rightarrow DEMO?
+#+end_notes
+- [[https://gitpod.io/][Gitpod]]
+- [[https://github.com/features/codespaces][Github Codespaces]]
+- [[https://www.eclipse.org/che/][Eclipse Che]]
+
+
+** Translations
+#+begin_notes
+- drive by contributions can be helpful here
+- don't make people install gettext or edit XML…
+#+end_notes
+
+- use a webservice like [[https://weblate.org/][weblate]]
+
+
+** Documentation / Tutorials
+
+#+begin_notes
+- docs can be written by users unfamiliar with rst/markdown/etc.
+  \rightarrow provide a web IDE + "open in $webIDE" button
+  \rightarrow for bigger docs, accept the content, convert it yourself
+#+end_notes
+
+#+ATTR_REVEAL: :frag (appear)
+- make it obvious how to edit
+- accept *any* type of format (even @@html:<i class="far fa-file-word"></i>@@ or @@html:<i class="fas fa-scroll"></i>@@)
+
+
+** Communication
+
+#+begin_notes
+- clearly document how to reach the project, monitor this place
+
+real time chat:
+- IRC & Gitter: not the best thing anymore
+- Matrix, Slack, Discord, etc., bridge if possible
+
+Forums/ML:
+- Discourse, mailinglists, GitHub discussions
+- separate user forum & dev forum
+
+Issue tracker:
+- have one, preferably near the source code
+- for larger projects: separate from feature tracking
+
+\rightarrow use whatever your contributors & users are most familiar with
+#+end_notes
+
+#+ATTR_REVEAL: :frag (appear)
+*One* place to reach the project
+
+#+ATTR_REVEAL: :frag (appear)
+1. Real time chat
+2. Forum/mailing list
+3. Issue/feature tracker
+
+
+* Community
+
+#+begin_notes
+- project should make it clear how to contact it & get it touch
+  \Rightarrow landing page, have just very few channels and monitor all of them
+  if someone joins, you as the maintainer must be made aware of that
+- project must *want* contributions
+#+end_notes
+
+- be an enabler not a gatekeeper
+
+
+** The Contributor Funnel
+
+#+begin_notes
+- generally how people become maintainers/contributors:
+  user \rightarrow contributor \rightarrow maintainer
+- more contributors? \Rightarrow get more users!
+#+end_notes
+
+@@html:<img src="./media/contributor_funnel.svg"></img>@@
+
+
+** Recruiting contributors
+#+begin_notes
+- [[https://docs.google.com/presentation/d/1hsJLv1ieSqtXBzd5YZusY-mB8e1VJzaeOmh8Q4VeMio/][study by Mozilla]] about engagement in the community
+- you *must* give contributors a vision \rightarrow they'll return even if the past wasn't great
+  \rightarrow have features/roadmaps ready, encourage ideas, etc
+- onboarding different: past experience highly motivating
+#+end_notes
+@@html:<img src="./media/mozilla_impact_study.png"></img>@@
+
+#+ATTR_REVEAL: :frag (appear)
+- contributors need a vision
+- good onboarding experience encourages further onboarding
+
+#+REVEAL: split
+
+#+begin_notes
+- respond within 48h to PR \Rightarrow very high likelihood of returning
+- respond later than 7d \Rightarrow you are not seeing them ever again
+#+end_notes
+
+@@html:<img src="./media/mozilla_days_to_first_contribution.png" height="350px"/>@@
+
+#+ATTR_REVEAL: :frag (appear)
+- prompt responses boost the chances of a contributor returning
+- suggest another issue to work on
+
+** Retaining contributors
+
+#+begin_notes
+- intrinsic motivation: desire to code just for fun/hobby
+- altruism, including community identification (satisfy need to belong to group)
+- future reward: revenue from selling product, skills, self-marketing, peer recognition
+- personal need: scratch your own itch
+#+end_notes
+#+ATTR_REVEAL: :frag (appear)
+Keep them motivated!
+
+#+ATTR_REVEAL: :frag (appear)
+- intrinsic motivation
+- altruism
+- future rewards
+- personal need
+
+
+** Build a welcoming community
+
+#+begin_notes
+- codes of conduct are not evil,
+  but don't just stick the [[https://www.contributor-covenant.org/][contributor covenant]] on your project and be done with it
+  \Rightarrow live by the thing
+
+- provide a place for your community to meet & talk
+  \rightarrow nurtures the sense of belonging
+  \rightarrow helps *you*, as all communication needn't go through you
+
+- documented rules & processes prevent hair splitting
+#+end_notes
+
+#+ATTR_REVEAL: :frag (appear)
+- enforce a code of conduct
+- provide a place for your community to meet & talk
+- document processes meticulously
+- be present and friendly
+- empower your contributors
+
+** Productive Communication
+
+- reduce noise
+- be constructive
+- you don't have to respond to everything
+
+** Landing page
+
+#+begin_notes
+- have a simple landing page with outline how to contribute
+- must have: how to reach the project and monitor that channel!
+#+end_notes
+
+#+ATTR_REVEAL: :frag (appear)
+[[https://whatcanidoformozilla.org][whatcanidoformozilla.org]]
+- links to communication channels
+- contributor documentation
+
+** Empower others
+
+#+ATTR_REVEAL: :frag (appear)
+- Even if it takes you 5 min to fix it yourself and 50 min to mentor a contributor, mentor the contributor!
+
+** Be clear & accountable
+
+#+begin_notes
+- When will a contribution be accepted?
+- How to become a maintainer?
+- How to cut new releases?
+
+- you must stick to your own rules
+#+end_notes
+
+#+ATTR_REVEAL: :frag (appear)
+- clearly documented processes & rules
+- stick to them, enforce them
+- remove bad actors
+
+
+* TODO Links
+
+- slides:
+  @@html: <i class="fab fa-github"></i>@@ [[https://github.com/dcermak/fosdem_2022][=dcermak/fosdem_2022=]]
+
+- [[https://docs.google.com/presentation/d/1hsJLv1ieSqtXBzd5YZusY-mB8e1VJzaeOmh8Q4VeMio/][measuring engagement]] from Mozilla
+- [[https://mikemcquaid.com/2018/08/14/the-open-source-contributor-funnel-why-people-dont-contribute-to-your-open-source-project/][The Open Source Contributor Funnel by Mike McQuaid]]
+- [[https://opensource.guide/building-community/][The Open Source Guide]]
+- [[http://www.jstor.org/stable/27751021][Working for Free? Motivations for Participating in Open-Source Projects]]
+- [[https://producingoss.com/][Producing Open Source Software]]
+
+* TODO Legal
+
+- [[https://revealjs.com/][reveal.js]] MIT
+- [[https://fontawesome.com/][Font Awesome]] CC-BY-4.0 and SIL OFL 1.1 and MIT
+- Open Source Contributor funnel: own work derived from [[https://mikemcquaid.com/2018/08/14/the-open-source-contributor-funnel-why-people-dont-contribute-to-your-open-source-project/][Mike McQaid]]
+- [[https://commons.wikimedia.org/wiki/File:Silver_bullet.png][Silver bullet photo]] CC-BY-SA-4.0
+
+* Questions?
+
+#+ATTR_REVEAL: :frag appear :frag_idx 1
+*Answers!*
