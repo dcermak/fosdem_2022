@@ -18,7 +18,7 @@ jobs:
       - name: build the webpage
         run: |
           dnf -y module enable nodejs:16
-          dnf -y install --refresh emacs-nox yarnpkg nodejs git
+          dnf -y install --refresh emacs yarnpkg nodejs git
           emacs enabling_contributions.org -Q --batch -l export-init.el -f org-reveal-export-to-html --kill
 
       - name: copy the webpage to build
