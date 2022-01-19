@@ -19,11 +19,11 @@ jobs:
         run: |
           dnf -y module enable nodejs:16
           dnf -y install --refresh emacs yarnpkg nodejs git
+          yarn install
           emacs enabling_contributions.org -Q --batch -l export-init.el -f org-reveal-export-to-html --kill
 
       - name: copy the webpage to build
         run: |
-          yarn install
           cp --recursive media/ build/
           cp --recursive node_modules/ build/
           cp *.html build/
