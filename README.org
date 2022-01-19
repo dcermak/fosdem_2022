@@ -1,0 +1,5 @@
+* FOSDEM 2022: Tearing down Barriers for Contributions
+
+This repository contains the slides for my presentation at [[https://fosdem.org/2022/schedule/event/community_contributions/][FOSDEM 2022]]
+
+You can find the rendered slides here: [[https://dcermak.github.io/fosdem_2022/enabling_contributions.html][dcermak.github.io/fosdem_2022]].
