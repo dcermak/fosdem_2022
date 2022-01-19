@@ -3,3 +3,15 @@
 This repository contains the slides for my presentation at [[https://fosdem.org/2022/schedule/event/community_contributions/][FOSDEM 2022]]
 
 You can find the rendered slides here: [[https://dcermak.github.io/fosdem_2022/enabling_contributions.html][dcermak.github.io/fosdem_2022]].
+
+
+** Building the slides
+
+You can create the html slides yourself from within Emacs by opening the
+[[./enabling_contributions.org]] file, launching =org-mode= and executing ~(require
+'ox-reveal)~ (you might have to install =ox-reveal= beforehand).
+
+If you are not a Emacs user, then just install Emacs and execute:
+#+begin_src bash
+emacs enabling_contributions.org -Q --batch -l export-init.el -f org-reveal-export-to-html --kill
+#+end_src
