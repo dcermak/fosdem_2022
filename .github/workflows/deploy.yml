@@ -43,6 +43,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: build
+          path: ./build
 
       - name: deploy to github pages
         uses: JamesIves/github-pages-deploy-action@v4
