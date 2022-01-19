@@ -3,7 +3,7 @@
 #+DATE: 5.2.2022
 #+EMAIL: dcermak@suse.com
 #+TITLE: Tearing down Barriers for Contributions
-#+SUBTITLE: Enable 
+#+SUBTITLE: Empower Non-coders and Newcomers
 
 #+REVEAL_ROOT: ./node_modules/reveal.js/
 #+REVEAL_THEME: simple
@@ -15,7 +15,7 @@
 #+REVEAL_HIGHLIGHT_CSS: ./node_modules/reveal.js/plugin/highlight/zenburn.css
 
 #+REVEAL_TITLE_SLIDE: <h2 class="title">%t</h2>
-# #+REVEAL_TITLE_SLIDE: <p class="subtitle" style="color: Gray;">%s</p>
+#+REVEAL_TITLE_SLIDE: <p class="subtitle" style="color: Gray;">%s</p>
 #+REVEAL_TITLE_SLIDE: <p class="author">%a</p>
 #+REVEAL_TITLE_SLIDE: <img src="./media/FOSDEM_logo.svg" height="50px" style="margin-bottom:-12px"/> FOSDEM 2022
 # #+REVEAL_TITLE_SLIDE: <h3 class="date"><img src="./media/FOSDEM_logo.svg" height="50px" style="margin-bottom:-12px"/>%d</h3>
@@ -42,7 +42,12 @@ Dan Čermák
 
 * TODO Agenda
 
-
+  - [[Story][Story]]
+  - [[Target audience][Target audience]]
+  - [[Tooling][Tooling]]
+  - [[Community][Community]]
+  - [[Checklist][Checklist]]
+  - [[Questions?][Questions]]
 
 * Story
 
@@ -89,11 +94,18 @@ do some research:
 #+ATTR_REVEAL: :frag (appear)
 - package & project maintainers
 - you *want* more contributions & contributors
+- ask yourself: Who's your target audience?
 
 @@html:<img src="./media/silver_bullet.png" style="transform:rotate(90deg);" class="fragment appear"/>@@
 
 
 * Make it trivial to contribute
+#+ATTR_REVEAL: :frag (appear)
+@@html:<i class="fas fa-spell-check"></i>@@
+Can my grandma correct a typo?
+
+#+REVEAL: split
+
 #+begin_notes
 - can I figure it out \rightarrow contributor docs, translations available
 - what do I need \rightarrow barrier to entry wrt tooling
@@ -101,15 +113,10 @@ do some research:
 #+end_notes
 
 #+ATTR_REVEAL: :frag (appear)
-@@html:<i class="fas fa-spell-check"></i>@@
-Can my grandma correct a typo?
-
-#+REVEAL: split
-
-#+ATTR_REVEAL: :frag (appear)
 1. Can I figure out how to contribute?
 2. What do I need to contribute?
-3. How can I get my contribution accepted?
+3. How can I join the community?
+4. How can I get my contribution accepted?
 
 
 * Tooling
@@ -123,7 +130,7 @@ Can my grandma correct a typo?
 - standardized development environment
 - mostly based on VSCode + containers, highly customizable
 
-\rightarrow DEMO?
+\rightarrow DEMO? either [[https://gitpod.io/#https://github.com/gitpod-io/openvscode-server][upstream]] or [[https://gitpod.io/#https://github.com/dcermak/openQA][openQA]]
 #+end_notes
 - [[https://gitpod.io/][Gitpod]]
 - [[https://github.com/features/codespaces][Github Codespaces]]
@@ -145,6 +152,8 @@ Can my grandma correct a typo?
 - docs can be written by users unfamiliar with rst/markdown/etc.
   \rightarrow provide a web IDE + "open in $webIDE" button
   \rightarrow for bigger docs, accept the content, convert it yourself
+
+- provide a link to directly edit the docs like [[https://rancher.com/docs/k3s/latest/en/][Rancher]] and plenty others do
 #+end_notes
 
 #+ATTR_REVEAL: :frag (appear)
@@ -169,7 +178,7 @@ Issue tracker:
 - have one, preferably near the source code
 - for larger projects: separate from feature tracking
 
-\rightarrow use whatever your contributors & users are most familiar with
+\rightarrow use whatever your contributors & users are already using!
 #+end_notes
 
 #+ATTR_REVEAL: :frag (appear)
@@ -190,12 +199,13 @@ Issue tracker:
 - project must *want* contributions
 #+end_notes
 
-- be an enabler not a gatekeeper
+- be an enabler and empower your community, don't be a gatekeeper
 
 
 ** The Contributor Funnel
 
 #+begin_notes
+- from Mike McQuaid
 - generally how people become maintainers/contributors:
   user \rightarrow contributor \rightarrow maintainer
 - more contributors? \Rightarrow get more users!
@@ -259,53 +269,65 @@ Keep them motivated!
   \rightarrow nurtures the sense of belonging
   \rightarrow helps *you*, as all communication needn't go through you
 
-- documented rules & processes prevent hair splitting
+- documented rules & processes prevent hair splitting:
+  - undocumented rules that are just in a "hive-mind" result in contributors getting frustrated
+    \Rightarrow they'll leave soon
+  - if there is a conflict, then you can point to the rules
+  - even better: enforce rules via code
+
+- empower your contributors:
+  - if new people show up, let them take simple issues even if you could solve them in 1/10th of the time
+  - share ownership of your project
 #+end_notes
 
 #+ATTR_REVEAL: :frag (appear)
 - enforce a code of conduct
 - provide a place for your community to meet & talk
-- document processes meticulously
+- document & enforce processes meticulously
 - be present and friendly
 - empower your contributors
 
-** Productive Communication
+# ** Living your values
 
-- reduce noise
-- be constructive
-- you don't have to respond to everything
+# #+begin_notes
+# Dealing with difficult people:
+# - few people are intentionally malicious
 
-** Landing page
+# productive communication:
+# - reduce noise
+# - be constructive
+# - you don't have to respond to everything
 
-#+begin_notes
-- have a simple landing page with outline how to contribute
-- must have: how to reach the project and monitor that channel!
-#+end_notes
+# #+end_notes
 
-#+ATTR_REVEAL: :frag (appear)
-[[https://whatcanidoformozilla.org][whatcanidoformozilla.org]]
-- links to communication channels
-- contributor documentation
+# - enforce your own rules
+# - strive to have productive conversations
+# - remove bad actors if necessary
 
-** Empower others
 
-#+ATTR_REVEAL: :frag (appear)
-- Even if it takes you 5 min to fix it yourself and 50 min to mentor a contributor, mentor the contributor!
+* Checklist
 
-** Be clear & accountable
+- [ ] Landing page (\rightarrow [[https://whatcanidoformozilla.org][whatcanidoformozilla.org]])
+- [ ] Appropriate communication channels with newbie corner
+- [ ] New contributor/quick start guide
+- [ ] Automated CI
+- [ ] Tasks & follow up tasks for newcomers
+- [ ] Can my grandma correct that typo?
 
-#+begin_notes
-- When will a contribution be accepted?
-- How to become a maintainer?
-- How to cut new releases?
+# ** Be clear & accountable
 
-- you must stick to your own rules
-#+end_notes
+# #+begin_notes
+# - When will a contribution be accepted?
+# - How to become a maintainer?
+# - How to cut new releases?
 
-#+ATTR_REVEAL: :frag (appear)
-- clearly documented processes & rules
-- stick to them, enforce them
-- remove bad actors
+# - you must stick to your own rules
+# #+end_notes
+
+# #+ATTR_REVEAL: :frag (appear)
+# - clearly documented processes & rules
+# - stick to them, enforce them
+# - remove bad actors
 
 
 * TODO Links
