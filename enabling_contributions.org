@@ -40,7 +40,7 @@ Dan Čermák
 #+REVEAL_HTML: <li style="list-style-type:none;"><i class="fas fa-key"></i><a href="https://keys.openpgp.org/vks/v1/by-fingerprint/FF62839C3097EBE20E8926B2E632C3380610D1C5">E632 C338 0610 D1C5</a></li>
 #+REVEAL_HTML: </ul>
 
-* TODO Agenda
+* Agenda
 
   - [[Story][Story]]
   - [[Target audience][Target audience]]
@@ -66,18 +66,6 @@ It all started with a workshop…
 * Target audience
 
 #+begin_notes
-GENERAL:
-- invest more into newcomers and less into drive by contributions
-- do stuff that gets you most bang for the buck
-- two types of potential contributors:
-  1. wants to fix a bug/issue or add a feature
-  2. thinks the project is cool \Rightarrow wants to contribute just because
-- don't kill altruism!
-- open communication, open decision processes, make it clear how to become a member/contributor
-- there's no silver bullet
-- be aware that this is a continuous & never-ending process
-#+end_notes
-#+begin_notes
 - aimed at maintainers who *want* more contributors and *want* to put in the work
 
 ask yourself:
@@ -89,6 +77,8 @@ ask yourself:
 
 do some research:
 - in which areas are you lacking people?
+
+\Rightarrow do what will probably yield the highest reward wrt contributors
 #+end_notes
 
 #+ATTR_REVEAL: :frag (appear)
@@ -330,23 +320,24 @@ Keep them motivated!
 # - remove bad actors
 
 
-* TODO Links
+* Links
 
-- slides:
-  @@html: <i class="fab fa-github"></i>@@ [[https://github.com/dcermak/fosdem_2022][=dcermak/fosdem_2022=]]
+- slides: @@html: <i class="fab fa-github"></i>@@ [[https://github.com/dcermak/fosdem_2022][=dcermak/fosdem_2022=]]
 
-- [[https://docs.google.com/presentation/d/1hsJLv1ieSqtXBzd5YZusY-mB8e1VJzaeOmh8Q4VeMio/][measuring engagement]] from Mozilla
+- [[https://docs.google.com/presentation/d/1hsJLv1ieSqtXBzd5YZusY-mB8e1VJzaeOmh8Q4VeMio/][Measuring Engagement]] from Mozilla
 - [[https://mikemcquaid.com/2018/08/14/the-open-source-contributor-funnel-why-people-dont-contribute-to-your-open-source-project/][The Open Source Contributor Funnel by Mike McQuaid]]
 - [[https://opensource.guide/building-community/][The Open Source Guide]]
 - [[http://www.jstor.org/stable/27751021][Working for Free? Motivations for Participating in Open-Source Projects]]
 - [[https://producingoss.com/][Producing Open Source Software]]
 
-* TODO Legal
+* Legal
 
 - [[https://revealjs.com/][reveal.js]] MIT
 - [[https://fontawesome.com/][Font Awesome]] CC-BY-4.0 and SIL OFL 1.1 and MIT
 - Open Source Contributor funnel: own work derived from [[https://mikemcquaid.com/2018/08/14/the-open-source-contributor-funnel-why-people-dont-contribute-to-your-open-source-project/][Mike McQaid]]
 - [[https://commons.wikimedia.org/wiki/File:Silver_bullet.png][Silver bullet photo]] CC-BY-SA-4.0
+- Open Source Community Citizens Logo: © SUSE LLC
+- contribution graphs from [[https://wiki.mozilla.org/Contribute/analysis][Mozilla's contribution analysis]]
 
 * Questions?
 
